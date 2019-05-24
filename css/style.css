@@ -6,13 +6,14 @@
 html, body {
   height: 100%;
   scroll-behavior: smooth;
-  background-color: teal; }
+  background-color: #FEFEFE; }
 
 html {
   font-size: 62.5%; }
 
 body {
-  position: relative; }
+  position: relative;
+  font-family: "Lato", sans-serif; }
 
 h1 {
   font-size: 2.6rem; }
@@ -31,9 +32,90 @@ ul {
 
 a:link, a:visited {
   text-decoration: none;
-  color: #333;
+  color: #d61d4e;
   font-weight: 600;
   font-size: inherit; }
 
 a:hover, a:active {
-  color: #1a1a1a; }
+  color: #a9173e; }
+
+.header {
+  width: 100%; }
+
+.navbar {
+  width: 100%;
+  background-color: #40a798;
+  display: flex;
+  align-items: center;
+  padding: 4rem 3rem; }
+  .navbar__logo {
+    margin-right: 10%;
+    color: #ffeaa5;
+    display: flex;
+    align-items: baseline; }
+    .navbar__logo span {
+      margin-left: 1.5rem; }
+      .navbar__logo span i {
+        font-size: 3rem; }
+  .navbar__menu {
+    display: flex; }
+    .navbar__menu-item {
+      padding: 0 2rem; }
+      .navbar__menu-item a {
+        color: #FEFEFE;
+        font-weight: normal;
+        transition: all .3s; }
+        .navbar__menu-item a:hover {
+          color: #ffeaa5; }
+      .navbar__menu-item .active {
+        color: #ffeaa5; }
+
+.hero {
+  height: 60vh;
+  background-color: #226b80;
+  display: flex; }
+  .hero__left {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem; }
+    .hero__left-desc {
+      color: #ffeaa5;
+      font-size: 3.5rem; }
+  .hero__right {
+    background-image: url(../img/kakor_front.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 40%;
+    height: 100%; }
+
+.whatson {
+  width: 80%;
+  margin: 6rem auto; }
+  .whatson__title {
+    color: #226b80;
+    font-weight: bold;
+    margin-bottom: 2rem; }
+  .whatson__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .whatson__box {
+    margin-bottom: 3rem; }
+  .whatson__box1 {
+    width: 30%;
+    background-color: black; }
+  .whatson__box2 {
+    width: 68%;
+    background-color: green; }
+  .whatson__box3 {
+    width: 70%;
+    background-color: blue; }
+  .whatson__box4 {
+    width: 28%;
+    background-color: red; }
+  .whatson__box5 {
+    width: 100%;
+    background-color: orange; }

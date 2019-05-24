@@ -1,0 +1,75 @@
+.hero {
+    height: 60vh;
+    background-color: $darkblue;
+    display: flex;
+
+    &__left {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem;
+
+        &-desc {
+            color: $yellow;
+            font-size: 3.5rem;
+        }
+    }
+
+    &__right {
+        background-image: url(../img/kakor_front.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 40%;
+        height: 100%;
+    }
+}
+
+.whatson {
+    width: 80%;
+    margin: 6rem auto;
+
+    &__title {
+        color: $darkblue;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+
+    &__container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__box {
+        margin-bottom: 3rem;
+    }
+
+    &__box1 {
+        width: 30%;
+        background-color: black;
+    }
+    
+    &__box2 {
+        width: 68%;
+        background-color: green;
+    }
+
+    &__box3 {
+        width: 70%;
+        background-color: blue;
+    }
+
+    &__box4 {
+        width: 28%;
+        background-color: red;
+    }
+
+    &__box5 {
+        width: 100%;
+        background-color: orange;
+    }
+
+
+}

@@ -1,0 +1,48 @@
+.header {
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    background-color: $cyan;
+    display: flex;
+    align-items: center;
+    padding: 4rem 3rem;
+
+    &__logo {
+        margin-right: 10%;
+        color: $yellow;
+        display: flex;
+        align-items: baseline;
+
+        span {
+            margin-left: 1.5rem;
+
+            i {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+
+        &-item {
+            padding: 0 2rem;
+
+            a {
+                color: $white;
+                font-weight: normal;
+                transition: all .3s;
+
+                &:hover {
+                    color: $yellow;
+                }
+            }
+
+            .active {
+                color: $yellow;
+            }
+        }
+    }
+}
