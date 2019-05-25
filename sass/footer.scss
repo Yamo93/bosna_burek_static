@@ -1,0 +1,38 @@
+.footer {
+    height: 30vh;
+    background-color: $darkblue;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__text {
+        color: $yellow;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 3rem;
+
+        span {
+            color: $red;
+        }
+    }
+
+    &__menu {
+        display: flex;
+
+        &-item {
+            padding: 1rem 2.5rem;
+            font-size: 1.6rem;
+
+            a:link, a:visited {
+                color: $yellow;
+                transition: all .3s;
+            }
+
+            a:hover, a:active {
+                color: $red;
+            }
+        }
+    }
+}

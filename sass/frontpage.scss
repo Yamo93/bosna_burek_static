@@ -11,8 +11,9 @@
         padding: 4rem;
 
         &-desc {
-            color: $yellow;
+            color: $white;
             font-size: 3.5rem;
+            font-weight: normal;
         }
     }
 
@@ -44,32 +45,165 @@
 
     &__box {
         margin-bottom: 3rem;
+
+        &-img {
+            background-size: cover;
+            background-position: center;
+            height: 25vh;
+            margin-bottom: 1.5rem;
+            box-shadow: .5px 1px 1.5px rgba(0, 0, 0, .5);
+        }
+
+        &-text {
+            font-size: 1.4rem;
+            margin-bottom: .5rem;
+        }
+
+        &-link:link {
+            font-size: 1.6rem;
+        }
     }
 
     &__box1 {
         width: 30%;
-        background-color: black;
+
+        .whatson__box-img {
+            background-image: url(../img/kaka_glass.jpg);
+        }
     }
     
     &__box2 {
         width: 68%;
-        background-color: green;
+        
+        .whatson__box-img {
+            background-image: url(../img/tonfiskmacka.jpg);
+        }
     }
 
     &__box3 {
         width: 70%;
-        background-color: blue;
+
+        .whatson__box-img {
+            background-image: url(../img/burek.jpg);
+        }
     }
 
     &__box4 {
         width: 28%;
-        background-color: red;
+        
+        
+        .whatson__box-img {
+            background-image: url(../img/kaffekopp_hjarta.jpg);
+        }
     }
 
     &__box5 {
         width: 100%;
-        background-color: orange;
+        
+        .whatson__box-img {
+            background-image: url(../img/rakmacka.jpg);
+        }
+    }
+}
+
+.frontinfo {
+    width: 80%;
+    margin: 6rem auto;
+
+    &__title {
+        color: $darkblue;
+        font-weight: bold;
+        margin-bottom: 2rem;
     }
 
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
 
+    &__box {
+        width: 30%;
+        box-shadow: .5px 1px 1.5px rgba(0, 0, 0, .5);
+
+        &-img {
+            height: 20vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        &-title {
+            margin-bottom: 2rem;
+        }
+
+        &-text {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+        }
+
+        &-link:link, &-link:visited {
+            display: inline-block;
+            background-color: $red;
+            color: $white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            padding: 1.5rem 3rem;
+            transition: all .3s;
+        }
+
+        &-link:hover, &-link:active {
+            background-color: darken($red, 10%);
+        }
+
+        .info {
+            padding: 3rem;
+        }
+
+        &:nth-child(1) {
+            background-color: $yellow;
+
+            .frontinfo__box-img {
+                background-image: url(../img/delikatess.jpg);
+            }
+
+            .frontinfo__box-title {
+                color: $darkblue;
+            }
+
+            .frontinfo__box-text {
+                color: $darkblue;
+            }
+        }
+
+        &:nth-child(2) {
+            background-color: $cyan;
+
+            .frontinfo__box-img {
+                background-image: url(../img/burek_slice.jpg);
+            }
+
+            .frontinfo__box-title {
+                color: $white;
+            }
+
+            .frontinfo__box-text {
+                color: $white;
+            }
+        }
+
+        &:nth-child(3) {
+            background-color: $grayblack;
+
+            .frontinfo__box-img {
+                background-image: url(../img/basarer.jpg);
+            }
+
+            .frontinfo__box-title {
+                color: $white;
+            }
+
+            .frontinfo__box-text {
+                color: $white;
+            }
+        }
+    }
 }

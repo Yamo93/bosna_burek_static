@@ -81,8 +81,9 @@ a:hover, a:active {
     align-items: center;
     padding: 4rem; }
     .hero__left-desc {
-      color: #ffeaa5;
-      font-size: 3.5rem; }
+      color: #FEFEFE;
+      font-size: 3.5rem;
+      font-weight: normal; }
   .hero__right {
     background-image: url(../img/kakor_front.jpg);
     background-position: center;
@@ -104,18 +105,119 @@ a:hover, a:active {
     flex-wrap: wrap; }
   .whatson__box {
     margin-bottom: 3rem; }
+    .whatson__box-img {
+      background-size: cover;
+      background-position: center;
+      height: 25vh;
+      margin-bottom: 1.5rem;
+      box-shadow: 0.5px 1px 1.5px rgba(0, 0, 0, 0.5); }
+    .whatson__box-text {
+      font-size: 1.4rem;
+      margin-bottom: .5rem; }
+    .whatson__box-link:link {
+      font-size: 1.6rem; }
   .whatson__box1 {
-    width: 30%;
-    background-color: black; }
+    width: 30%; }
+    .whatson__box1 .whatson__box-img {
+      background-image: url(../img/kaka_glass.jpg); }
   .whatson__box2 {
-    width: 68%;
-    background-color: green; }
+    width: 68%; }
+    .whatson__box2 .whatson__box-img {
+      background-image: url(../img/tonfiskmacka.jpg); }
   .whatson__box3 {
-    width: 70%;
-    background-color: blue; }
+    width: 70%; }
+    .whatson__box3 .whatson__box-img {
+      background-image: url(../img/burek.jpg); }
   .whatson__box4 {
-    width: 28%;
-    background-color: red; }
+    width: 28%; }
+    .whatson__box4 .whatson__box-img {
+      background-image: url(../img/kaffekopp_hjarta.jpg); }
   .whatson__box5 {
-    width: 100%;
-    background-color: orange; }
+    width: 100%; }
+    .whatson__box5 .whatson__box-img {
+      background-image: url(../img/rakmacka.jpg); }
+
+.frontinfo {
+  width: 80%;
+  margin: 6rem auto; }
+  .frontinfo__title {
+    color: #226b80;
+    font-weight: bold;
+    margin-bottom: 2rem; }
+  .frontinfo__wrapper {
+    display: flex;
+    justify-content: space-between; }
+  .frontinfo__box {
+    width: 30%;
+    box-shadow: 0.5px 1px 1.5px rgba(0, 0, 0, 0.5); }
+    .frontinfo__box-img {
+      height: 20vh;
+      background-size: cover;
+      background-position: center; }
+    .frontinfo__box-title {
+      margin-bottom: 2rem; }
+    .frontinfo__box-text {
+      font-size: 1.4rem;
+      margin-bottom: 2rem; }
+    .frontinfo__box-link:link, .frontinfo__box-link:visited {
+      display: inline-block;
+      background-color: #d61d4e;
+      color: #FEFEFE;
+      font-size: 1.8rem;
+      font-weight: bold;
+      padding: 1.5rem 3rem;
+      transition: all .3s; }
+    .frontinfo__box-link:hover, .frontinfo__box-link:active {
+      background-color: #a9173e; }
+    .frontinfo__box .info {
+      padding: 3rem; }
+    .frontinfo__box:nth-child(1) {
+      background-color: #ffeaa5; }
+      .frontinfo__box:nth-child(1) .frontinfo__box-img {
+        background-image: url(../img/delikatess.jpg); }
+      .frontinfo__box:nth-child(1) .frontinfo__box-title {
+        color: #226b80; }
+      .frontinfo__box:nth-child(1) .frontinfo__box-text {
+        color: #226b80; }
+    .frontinfo__box:nth-child(2) {
+      background-color: #40a798; }
+      .frontinfo__box:nth-child(2) .frontinfo__box-img {
+        background-image: url(../img/burek_slice.jpg); }
+      .frontinfo__box:nth-child(2) .frontinfo__box-title {
+        color: #FEFEFE; }
+      .frontinfo__box:nth-child(2) .frontinfo__box-text {
+        color: #FEFEFE; }
+    .frontinfo__box:nth-child(3) {
+      background-color: #333131; }
+      .frontinfo__box:nth-child(3) .frontinfo__box-img {
+        background-image: url(../img/basarer.jpg); }
+      .frontinfo__box:nth-child(3) .frontinfo__box-title {
+        color: #FEFEFE; }
+      .frontinfo__box:nth-child(3) .frontinfo__box-text {
+        color: #FEFEFE; }
+
+.footer {
+  height: 30vh;
+  background-color: #226b80;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .footer__text {
+    color: #ffeaa5;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem; }
+    .footer__text span {
+      color: #d61d4e; }
+  .footer__menu {
+    display: flex; }
+    .footer__menu-item {
+      padding: 1rem 2.5rem;
+      font-size: 1.6rem; }
+      .footer__menu-item a:link, .footer__menu-item a:visited {
+        color: #ffeaa5;
+        transition: all .3s; }
+      .footer__menu-item a:hover, .footer__menu-item a:active {
+        color: #d61d4e; }
