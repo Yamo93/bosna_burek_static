@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     padding: 6rem;
+    padding-top: calc(15vh + 4rem);
 
     &__left {
         width: 45%;
@@ -21,6 +22,12 @@
             display: flex;
             justify-content: space-between;
             padding: 1.5rem 0;
+            cursor: pointer;
+            transition: all .3s;
+
+            &:hover {
+                background-color: rgba(#EEE, .5);
+            }
 
             &--img {
                 background-image: url(../img/burek_slice.jpg);
@@ -56,6 +63,11 @@
 
     &__currentproduct {
         margin-bottom: 3rem;
+
+        &-bigtitle {
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+        }
 
         &-img {
             background-image: url(../img/kaffe_tarta.jpg);
@@ -95,12 +107,106 @@
 
         &-text {
             font-size: 1.4rem;
+            margin-bottom: 2rem;
         }
+
+        &-link {
+
+            &:link, &:visited {
+                padding: 1rem 2rem;
+                background-color: $red;
+                color: $white;
+                font-size: 1.6rem;
+                transition: all .3s;
+            }
+
+            &:hover, &:active {
+                background-color: darken($red, 10%);
+            }
+        }
+
 
         &-price {
             margin-top: 1.5rem;
+            text-align: right;
             width: 20%;
             color: $red;
+        }
+    }
+
+    &__latest {
+
+        &-title {
+            margin-bottom: 1rem;
+        }
+
+        &-list {
+
+        }
+
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem 0;
+
+            &--img {
+                width: 7rem;
+                height: 7rem;
+                background-image: url(../img/burek_slice.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+
+            &--info {
+                width: 60%;
+            }
+
+            &--date {
+                font-size: 1.6rem;
+                margin-bottom: 1rem;
+
+                .icon {
+                    color: $red;
+                    margin-right: .5rem;
+                }
+            }
+
+            &--title {
+                font-size: 1.8rem;
+                margin-bottom: .5rem;
+            }
+
+            &--desc {
+                font-size: 1.4rem;
+            }
+
+            &--price {
+                h1 {
+                    color: $red;
+                    text-align: right;
+                    margin-bottom: 1.5rem;
+                }
+
+                a {
+                    padding: .5rem 1.5rem;
+                    background-color: $red;
+                    color: $white;
+                    font-size: 1.6rem;
+                    transition: all .3s;
+
+                    &:hover {
+                        background-color: darken($red, 10%);
+                    }
+                }
+            }
+        }
+
+        &-item:first-child {
+            padding-top: 0;
+        }
+
+        &-item:not(:last-child) {
+            border-bottom: .5px solid rgba(#333, .2);
         }
     }
 }

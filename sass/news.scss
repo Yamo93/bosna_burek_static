@@ -1,0 +1,123 @@
+.news {
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem;
+    padding-top: calc(15vh + 4rem);
+
+    &__left {
+        width: 60%;
+    }
+
+    &__right {
+        width: 30%;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__article {
+        margin-bottom: 6rem;
+
+        &-img {
+            height: 30vh;
+            background-image: url(../img/burek_slice.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-bottom: 2rem;
+            transition: all .3s;
+
+            &:hover {
+                filter: brightness(90%);
+            }
+        }
+
+        &-info {
+            display: flex;
+            margin-bottom: 2.5rem;
+
+            .icon {
+                color: $red;
+                margin-right: 1rem;
+            }
+        }
+
+        &-date, &-user {
+            font-size: 1.6rem;
+            color: rgba(#333, .8);
+        }
+
+        &-date {
+            margin-right: 2rem;
+        }
+
+        &-title {
+            margin-bottom: 2rem;
+        }
+
+        &-excerpt {
+            font-size: 1.6rem;
+            width: 60%;
+            margin-bottom: 2rem;
+        }
+
+        &-readmore {
+            &:link, &:visited {
+                padding: .5rem 3rem;
+                background-color: $red;
+                color: $white;
+                font-size: 1.6rem;
+                transition: all .3s;
+            }
+
+            &:hover, &:active {
+                background-color: darken($red, 10%);
+            }
+        }
+    }
+
+    &__latest {
+        margin-bottom: 5rem;
+
+        &-item {
+            display: flex;
+            margin-bottom: 3rem;
+        }
+
+        &-img {
+            width: 7rem;
+            height: 7rem;
+            background-image: url(../img/burek_slice.jpg);
+            background-position: center;
+            background-size: cover;
+            box-shadow: .5px 1px 1.5px rgba(0, 0, 0, .5);
+            margin-right: 2rem;
+        }
+
+        &-info {
+
+        }
+
+        &-date, &-user {
+            font-size: 1.6rem;
+            margin-bottom: .5rem;
+
+            .icon {
+                color: $red;
+                margin-right: 1rem;
+            }
+        }
+
+        &-title {
+            font-size: 1.8rem;
+            margin-bottom: .5rem;
+        }
+
+        &-user {
+            span {
+                font-weight: bold;
+            }
+        }
+
+    }
+}

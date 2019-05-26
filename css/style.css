@@ -34,7 +34,8 @@ a:link, a:visited {
   text-decoration: none;
   color: #d61d4e;
   font-weight: 600;
-  font-size: inherit; }
+  font-size: inherit;
+  transition: all .3s; }
 
 a:hover, a:active {
   color: #a9173e; }
@@ -54,14 +55,18 @@ a:hover, a:active {
   justify-content: space-between; }
 
 .header {
-  width: 100%; }
+  width: 100%;
+  position: fixed;
+  z-index: 20; }
 
 .navbar {
   width: 100%;
+  height: 15vh;
   background-color: #40a798;
   display: flex;
   align-items: center;
-  padding: 4rem 3rem; }
+  padding: 4rem 3rem;
+  transition: all .3s; }
   .navbar__logo {
     margin-right: 10%;
     color: #ffeaa5;
@@ -84,8 +89,14 @@ a:hover, a:active {
       .navbar__menu-item .active {
         color: #ffeaa5; }
 
+.shrinknavbar {
+  padding: 1rem 3rem;
+  height: 7vh;
+  box-shadow: 1px 1.5px 2px rgba(0, 0, 0, 0.5); }
+
 .hero {
-  height: 60vh;
+  height: 70vh;
+  padding-top: 15vh;
   background-color: #226b80;
   display: flex; }
   .hero__left {
@@ -211,7 +222,7 @@ a:hover, a:active {
         color: #FEFEFE; }
 
 .footer {
-  height: 30vh;
+  min-height: 20vh;
   background-color: #226b80;
   padding: 5rem;
   display: flex;
@@ -237,9 +248,11 @@ a:hover, a:active {
         color: #d61d4e; }
 
 .about {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem;
+  padding-top: calc(15vh + 4rem); }
   .about__img {
-    margin: 3rem;
+    margin: 0 3rem;
+    margin-bottom: 3rem;
     height: 25vh;
     background-image: url(../img/kassan.jpg);
     background-position: center;
@@ -292,7 +305,8 @@ a:hover, a:active {
 .menu {
   display: flex;
   justify-content: space-between;
-  padding: 6rem; }
+  padding: 6rem;
+  padding-top: calc(15vh + 4rem); }
   .menu__left {
     width: 45%; }
   .menu__right {
@@ -302,7 +316,11 @@ a:hover, a:active {
   .menu__list-item {
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem 0; }
+    padding: 1.5rem 0;
+    cursor: pointer;
+    transition: all .3s; }
+    .menu__list-item:hover {
+      background-color: rgba(238, 238, 238, 0.5); }
     .menu__list-item--img {
       background-image: url(../img/burek_slice.jpg);
       background-size: cover;
@@ -323,6 +341,9 @@ a:hover, a:active {
     border-bottom: 0.5px solid rgba(51, 51, 51, 0.2); }
   .menu__currentproduct {
     margin-bottom: 3rem; }
+    .menu__currentproduct-bigtitle {
+      font-size: 2.6rem;
+      margin-bottom: 1rem; }
     .menu__currentproduct-img {
       background-image: url(../img/kaffe_tarta.jpg);
       background-position: center;
@@ -346,8 +367,199 @@ a:hover, a:active {
       font-size: 1.8rem;
       margin-bottom: 1.5rem; }
     .menu__currentproduct-text {
-      font-size: 1.4rem; }
+      font-size: 1.4rem;
+      margin-bottom: 2rem; }
+    .menu__currentproduct-link:link, .menu__currentproduct-link:visited {
+      padding: 1rem 2rem;
+      background-color: #d61d4e;
+      color: #FEFEFE;
+      font-size: 1.6rem;
+      transition: all .3s; }
+    .menu__currentproduct-link:hover, .menu__currentproduct-link:active {
+      background-color: #a9173e; }
     .menu__currentproduct-price {
       margin-top: 1.5rem;
+      text-align: right;
       width: 20%;
       color: #d61d4e; }
+  .menu__latest-title {
+    margin-bottom: 1rem; }
+  .menu__latest-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0; }
+    .menu__latest-item--img {
+      width: 7rem;
+      height: 7rem;
+      background-image: url(../img/burek_slice.jpg);
+      background-position: center;
+      background-size: cover; }
+    .menu__latest-item--info {
+      width: 60%; }
+    .menu__latest-item--date {
+      font-size: 1.6rem;
+      margin-bottom: 1rem; }
+      .menu__latest-item--date .icon {
+        color: #d61d4e;
+        margin-right: .5rem; }
+    .menu__latest-item--title {
+      font-size: 1.8rem;
+      margin-bottom: .5rem; }
+    .menu__latest-item--desc {
+      font-size: 1.4rem; }
+    .menu__latest-item--price h1 {
+      color: #d61d4e;
+      text-align: right;
+      margin-bottom: 1.5rem; }
+    .menu__latest-item--price a {
+      padding: .5rem 1.5rem;
+      background-color: #d61d4e;
+      color: #FEFEFE;
+      font-size: 1.6rem;
+      transition: all .3s; }
+      .menu__latest-item--price a:hover {
+        background-color: #a9173e; }
+  .menu__latest-item:first-child {
+    padding-top: 0; }
+  .menu__latest-item:not(:last-child) {
+    border-bottom: 0.5px solid rgba(51, 51, 51, 0.2); }
+
+.news {
+  display: flex;
+  justify-content: space-between;
+  padding: 6rem;
+  padding-top: calc(15vh + 4rem); }
+  .news__left {
+    width: 60%; }
+  .news__right {
+    width: 30%; }
+  .news__title {
+    margin-bottom: 1rem; }
+  .news__article {
+    margin-bottom: 6rem; }
+    .news__article-img {
+      height: 30vh;
+      background-image: url(../img/burek_slice.jpg);
+      background-position: center;
+      background-size: cover;
+      margin-bottom: 2rem;
+      transition: all .3s; }
+      .news__article-img:hover {
+        filter: brightness(90%); }
+    .news__article-info {
+      display: flex;
+      margin-bottom: 2.5rem; }
+      .news__article-info .icon {
+        color: #d61d4e;
+        margin-right: 1rem; }
+    .news__article-date, .news__article-user {
+      font-size: 1.6rem;
+      color: rgba(51, 51, 51, 0.8); }
+    .news__article-date {
+      margin-right: 2rem; }
+    .news__article-title {
+      margin-bottom: 2rem; }
+    .news__article-excerpt {
+      font-size: 1.6rem;
+      width: 60%;
+      margin-bottom: 2rem; }
+    .news__article-readmore:link, .news__article-readmore:visited {
+      padding: .5rem 3rem;
+      background-color: #d61d4e;
+      color: #FEFEFE;
+      font-size: 1.6rem;
+      transition: all .3s; }
+    .news__article-readmore:hover, .news__article-readmore:active {
+      background-color: #a9173e; }
+  .news__latest {
+    margin-bottom: 5rem; }
+    .news__latest-item {
+      display: flex;
+      margin-bottom: 3rem; }
+    .news__latest-img {
+      width: 7rem;
+      height: 7rem;
+      background-image: url(../img/burek_slice.jpg);
+      background-position: center;
+      background-size: cover;
+      box-shadow: 0.5px 1px 1.5px rgba(0, 0, 0, 0.5);
+      margin-right: 2rem; }
+    .news__latest-date, .news__latest-user {
+      font-size: 1.6rem;
+      margin-bottom: .5rem; }
+      .news__latest-date .icon, .news__latest-user .icon {
+        color: #d61d4e;
+        margin-right: 1rem; }
+    .news__latest-title {
+      font-size: 1.8rem;
+      margin-bottom: .5rem; }
+    .news__latest-user span {
+      font-weight: bold; }
+
+.contact {
+  padding-top: calc(15vh);
+  display: flex;
+  justify-content: space-between; }
+  .contact__left {
+    width: 45%;
+    padding: 6rem; }
+    .contact__left form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      .contact__left form input[type=text], .contact__left form input[type=email], .contact__left form textarea {
+        padding: 1rem;
+        font-family: "Lato", sans-serif;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1.5px solid transparent;
+        transition: all .3s;
+        border: 1px solid rgba(51, 51, 51, 0.7); }
+        .contact__left form input[type=text]:focus, .contact__left form input[type=email]:focus, .contact__left form textarea:focus {
+          outline: none;
+          border-bottom: 1px solid rgba(214, 29, 78, 0.7); }
+      .contact__left form input[type=submit] {
+        padding: 1.5rem 2.5rem;
+        background-color: #d61d4e;
+        color: #FEFEFE;
+        font-family: "Lato", sans-serif;
+        font-size: 1.6rem;
+        cursor: pointer;
+        border: none;
+        transition: all .3s; }
+        .contact__left form input[type=submit]:hover {
+          background-color: #a9173e; }
+      .contact__left form #name {
+        width: 42%; }
+      .contact__left form #email {
+        width: 55%; }
+      .contact__left form #address {
+        width: 100%; }
+      .contact__left form #message {
+        width: 100%; }
+  .contact__title {
+    margin-bottom: 1rem; }
+  .contact__text {
+    margin-bottom: 2rem; }
+  .contact__means {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem; }
+    .contact__means .iconwrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #d61d4e;
+      border-radius: 50%;
+      margin-right: 2rem; }
+    .contact__means .icon {
+      font-size: 3rem;
+      padding: 1.5rem;
+      color: #FEFEFE; }
+  .contact .lastmeans {
+    margin-bottom: 8rem; }
+  .contact__info {
+    font-size: 1.6rem; }
+  .contact__right {
+    width: 50%;
+    background-color: #d61d4e; }

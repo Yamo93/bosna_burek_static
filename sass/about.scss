@@ -1,8 +1,10 @@
 .about {
     margin-bottom: 8rem;
+    padding-top: calc(15vh + 4rem);
 
     &__img {
-        margin: 3rem;
+        margin: 0 3rem;
+        margin-bottom: 3rem;
         height: 25vh;
         background-image: url(../img/kassan.jpg);
         background-position: center;
