@@ -1,0 +1,107 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem;
+
+    &__left {
+        width: 45%;
+    }
+
+    &__right {
+        width: 40%;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__list {
+
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem 0;
+
+            &--img {
+                background-image: url(../img/burek_slice.jpg);
+                background-size: cover;
+                background-position: center;
+                height: 7rem;
+                width: 7rem;
+            }
+
+            &--info {
+                width: 60%;
+
+                h2 {
+                    font-size: 1.8rem;
+                    margin-bottom: 1.5rem;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                }
+            }
+
+            &--price {
+                margin: 1.5rem;
+                color: $red;
+            }
+        }
+
+        &-item:not(:last-child) {
+            border-bottom: .5px solid rgba(#333, .2);
+        }
+    }
+
+    &__currentproduct {
+        margin-bottom: 3rem;
+
+        &-img {
+            background-image: url(../img/kaffe_tarta.jpg);
+            background-position: center;
+            background-size: cover;
+            height: 25vh;
+            margin-bottom: 1.5rem;
+        }
+
+        &-desc {
+            display: flex;
+            margin-bottom: 2.5rem;
+
+            .icon {
+                color: $red;
+                margin-right: .5rem;
+            }
+        }
+
+        &-date, &-user {
+            font-size: 1.6rem;
+            color: rgba(#111, .7);
+        }
+
+        &-date {
+            margin-right: 1.5rem;
+        }
+
+        &-info {
+            width: 70%;
+        }
+
+        &-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        &-text {
+            font-size: 1.4rem;
+        }
+
+        &-price {
+            margin-top: 1.5rem;
+            width: 20%;
+            color: $red;
+        }
+    }
+}
+

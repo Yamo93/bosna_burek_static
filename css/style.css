@@ -39,6 +39,20 @@ a:link, a:visited {
 a:hover, a:active {
   color: #a9173e; }
 
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(221, 221, 221, 0.5);
+  margin-bottom: 2.5rem; }
+  .line .fill {
+    width: 20%;
+    height: 2px;
+    background-color: rgba(214, 29, 78, 0.6); }
+
+.flexwrapper {
+  display: flex;
+  justify-content: space-between; }
+
 .header {
   width: 100%; }
 
@@ -221,3 +235,119 @@ a:hover, a:active {
         transition: all .3s; }
       .footer__menu-item a:hover, .footer__menu-item a:active {
         color: #d61d4e; }
+
+.about {
+  margin-bottom: 8rem; }
+  .about__img {
+    margin: 3rem;
+    height: 25vh;
+    background-image: url(../img/kassan.jpg);
+    background-position: center;
+    background-size: cover; }
+  .about__title {
+    font-weight: bold;
+    color: #226b80;
+    margin-bottom: 2.5rem;
+    text-align: center; }
+  .about__text {
+    color: #226b80;
+    margin: 1.5rem auto;
+    width: 50%; }
+
+.newsletter {
+  width: 35%;
+  margin: 3rem auto;
+  margin-bottom: 9rem;
+  background-color: #ffeaa5;
+  box-shadow: 1px 1.5px 2px rgba(0, 0, 0, 0.5);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .newsletter__text {
+    color: #226b80;
+    margin-bottom: 2.5rem; }
+  .newsletter form {
+    width: 80%; }
+  .newsletter__email {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-family: inherit;
+    font-size: 1.8rem;
+    display: block; }
+  .newsletter input[type=submit] {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: none;
+    background-color: #d61d4e;
+    cursor: pointer;
+    font-family: "Lato", sans-serif;
+    color: #FEFEFE;
+    font-weight: bold;
+    transition: all .3s; }
+    .newsletter input[type=submit]:hover {
+      background-color: #a9173e; }
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 6rem; }
+  .menu__left {
+    width: 45%; }
+  .menu__right {
+    width: 40%; }
+  .menu__title {
+    margin-bottom: 1rem; }
+  .menu__list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0; }
+    .menu__list-item--img {
+      background-image: url(../img/burek_slice.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 7rem;
+      width: 7rem; }
+    .menu__list-item--info {
+      width: 60%; }
+      .menu__list-item--info h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem; }
+      .menu__list-item--info p {
+        font-size: 1.4rem; }
+    .menu__list-item--price {
+      margin: 1.5rem;
+      color: #d61d4e; }
+  .menu__list-item:not(:last-child) {
+    border-bottom: 0.5px solid rgba(51, 51, 51, 0.2); }
+  .menu__currentproduct {
+    margin-bottom: 3rem; }
+    .menu__currentproduct-img {
+      background-image: url(../img/kaffe_tarta.jpg);
+      background-position: center;
+      background-size: cover;
+      height: 25vh;
+      margin-bottom: 1.5rem; }
+    .menu__currentproduct-desc {
+      display: flex;
+      margin-bottom: 2.5rem; }
+      .menu__currentproduct-desc .icon {
+        color: #d61d4e;
+        margin-right: .5rem; }
+    .menu__currentproduct-date, .menu__currentproduct-user {
+      font-size: 1.6rem;
+      color: rgba(17, 17, 17, 0.7); }
+    .menu__currentproduct-date {
+      margin-right: 1.5rem; }
+    .menu__currentproduct-info {
+      width: 70%; }
+    .menu__currentproduct-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem; }
+    .menu__currentproduct-text {
+      font-size: 1.4rem; }
+    .menu__currentproduct-price {
+      margin-top: 1.5rem;
+      width: 20%;
+      color: #d61d4e; }
