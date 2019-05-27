@@ -10,6 +10,8 @@ $white: #FEFEFE;
 $primary-font: 'Lato', sans-serif;
 $secondary-font: 'Raleway', sans-serif;
 
+$lightshadow: .5px 1px 1.5px rgba(0, 0, 0, .5);
+
 *, *::before, *::after {
     box-sizing: border-box;
     padding: 0;
@@ -24,6 +26,14 @@ html, body {
 
 html {
     font-size: 62.5%;
+
+    @include mediaquery(750px) {
+      font-size: 56.25%;
+    }
+
+    @include mediaquery(600px) {
+      font-size: 50%;
+    }
 }
 
 body {

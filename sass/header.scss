@@ -14,10 +14,13 @@
     transition: all .3s;
 
     &__logo {
-        margin-right: 10%;
+        margin-right: 3rem;
         color: $yellow;
-        display: flex;
         align-items: baseline;
+
+        @include mediaquery(950px) {
+          font-size: 2rem;
+        }
 
         span {
             margin-left: 1.5rem;
@@ -31,8 +34,16 @@
     &__menu {
         display: flex;
 
+        @include mediaquery(600px) {
+          display: none;
+        }
+
         &-item {
             padding: 0 2rem;
+
+            @include mediaquery(850px) {
+                padding: 0 1rem;
+            }
 
             a {
                 color: $white;

@@ -4,12 +4,20 @@
     background-color: $darkblue;
     display: flex;
 
+    @include mediaquery(650px) {
+      flex-direction: column-reverse;
+    }
+
     &__left {
         width: 60%;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 4rem;
+
+        @include mediaquery(650px) {
+          width: 100%;
+        }
 
         &-desc {
             color: $white;
@@ -24,6 +32,10 @@
         background-size: cover;
         width: 40%;
         height: 100%;
+
+        @include mediaquery(650px) {
+            width: 100%;
+          }
     }
 }
 
@@ -31,10 +43,23 @@
     width: 80%;
     margin: 6rem auto;
 
+    @include mediaquery(450px) {
+      text-align: center;
+    }
+
+    @include mediaquery(500px) {
+      margin: 3rem auto;
+      width: 90%;
+    }
+
     &__title {
         color: $darkblue;
         font-weight: bold;
         margin-bottom: 2rem;
+
+        @include mediaquery(500px) {
+            text-align: center;
+        }
     }
 
     &__container {
@@ -47,54 +72,85 @@
     &__box {
         margin-bottom: 3rem;
 
+        @include mediaquery(450px) {
+            margin-bottom: .5rem;
+        }
+
         &-img {
             background-size: cover;
             background-position: center;
             height: 25vh;
             margin-bottom: 1.5rem;
             box-shadow: .5px 1px 1.5px rgba(0, 0, 0, .5);
+
+            @include mediaquery(450px) {
+              height: 10vh;
+            }
         }
 
         &-text {
             font-size: 1.4rem;
             margin-bottom: .5rem;
+
+            @include mediaquery(450px) {
+                display: none;
+            }
         }
 
         &-link:link {
             font-size: 1.6rem;
+
+            @include mediaquery(450px) {
+                display: none;
+            }
         }
     }
 
     &__box1 {
         width: 30%;
 
+        @include mediaquery(450px) {
+          width: 100%;
+        }
+
         .whatson__box-img {
-            background-image: url(../img/kaka_glass.jpg);
+            background-image: url(../img/kaka_glass_small.jpg);
         }
     }
     
     &__box2 {
         width: 68%;
+
+        @include mediaquery(450px) {
+            width: 100%;
+        }
         
         .whatson__box-img {
-            background-image: url(../img/tonfiskmacka.jpg);
+            background-image: url(../img/tonfiskmacka_small.jpg);
         }
     }
 
     &__box3 {
         width: 70%;
 
+        @include mediaquery(450px) {
+            width: 100%;
+        }
+
         .whatson__box-img {
-            background-image: url(../img/burek.jpg);
+            background-image: url(../img/burek_small.jpg);
         }
     }
 
     &__box4 {
         width: 28%;
         
+        @include mediaquery(450px) {
+            width: 100%;
+        }
         
         .whatson__box-img {
-            background-image: url(../img/kaffekopp_hjarta.jpg);
+            background-image: url(../img/kaffekopp_hjarta_small.jpg);
         }
     }
 
@@ -105,26 +161,75 @@
             background-image: url(../img/rakmacka.jpg);
         }
     }
+
+    &__more {
+        &:link, &:visited {
+            display: none;
+
+            @include mediaquery(450px) {
+              display: block;
+            }
+            width: 100%;
+            font-size: 1.6rem;
+            padding: 1.5rem;
+            background-color: $red;
+            box-shadow: $lightshadow;
+            color: $white;
+        }
+    }
 }
 
 .frontinfo {
     width: 80%;
     margin: 6rem auto;
 
+    @include mediaquery(800px) {
+        margin: 3rem auto;
+        width: 90%;
+    }
+
+    @include mediaquery(650px) {
+        margin: 1.5rem auto;
+        width: 95%;
+      }
+
     &__title {
         color: $darkblue;
         font-weight: bold;
         margin-bottom: 2rem;
+
+        @include mediaquery(500px) {
+          text-align: center;
+        }
     }
 
     &__wrapper {
         display: flex;
         justify-content: space-between;
+
+        @include mediaquery(500px) {
+          flex-direction: column;
+          align-items: center;
+        }
     }
 
     &__box {
         width: 30%;
         box-shadow: .5px 1px 1.5px rgba(0, 0, 0, .5);
+
+        @include mediaquery(550px) {
+            width: 32%;
+        }
+
+        @include mediaquery(500px) {
+            width: 90%;
+            margin-bottom: 3rem;
+        }
+
+        @include mediaquery(500px) {
+            width: 95%;
+            margin-bottom: 3rem;
+        }
 
         &-img {
             height: 20vh;
@@ -163,7 +268,7 @@
             background-color: $yellow;
 
             .frontinfo__box-img {
-                background-image: url(../img/delikatess.jpg);
+                background-image: url(../img/delikatess_small.jpg);
             }
 
             .frontinfo__box-title {
@@ -179,7 +284,7 @@
             background-color: $cyan;
 
             .frontinfo__box-img {
-                background-image: url(../img/burek_slice.jpg);
+                background-image: url(../img/burek_slice_small.jpg);
             }
 
             .frontinfo__box-title {
@@ -195,7 +300,7 @@
             background-color: $grayblack;
 
             .frontinfo__box-img {
-                background-image: url(../img/basarer.jpg);
+                background-image: url(../img/basarer_small.jpg);
             }
 
             .frontinfo__box-title {

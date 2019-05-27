@@ -4,12 +4,56 @@
     padding: 6rem;
     padding-top: calc(15vh + 4rem);
 
+    @include mediaquery(950px) {
+        padding: 3rem;
+        padding-top: calc(15vh + 4rem);
+    }
+
+    @include mediaquery(800px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include mediaquery(500px) {
+        padding: 1.5rem;
+        padding-top: calc(15vh + 4rem);
+    }
+
     &__left {
         width: 60%;
+
+        @include mediaquery(800px) {
+          width: 90%;
+        }
+
+        @include mediaquery(500px) {
+          width: 95%;
+        }
+
+        @include mediaquery(400px) {
+          width: 100%;
+        }
+        
     }
 
     &__right {
         width: 30%;
+
+        @include mediaquery(950px) {
+          width: 35%;
+        }
+
+        @include mediaquery(800px) {
+            width: 90%;
+        }
+
+        @include mediaquery(500px) {
+            width: 95%;
+        }
+  
+          @include mediaquery(400px) {
+            width: 100%;
+        }
     }
 
     &__title {
@@ -87,7 +131,7 @@
         &-img {
             width: 7rem;
             height: 7rem;
-            background-image: url(../img/burek_slice.jpg);
+            background-image: url(../img/burek_slice_thumbnail.jpg);
             background-position: center;
             background-size: cover;
             box-shadow: .5px 1px 1.5px rgba(0, 0, 0, .5);

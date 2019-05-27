@@ -4,12 +4,55 @@
     padding: 6rem;
     padding-top: calc(15vh + 4rem);
 
+    @include mediaquery(900px) {
+        padding: 4rem;
+        padding-top: calc(15vh + 4rem);
+    }
+
+    @include mediaquery(800px) {
+        padding: 2rem;
+        padding-top: calc(15vh + 4rem);
+    }
+
+    @include mediaquery(700px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     &__left {
         width: 45%;
+
+        @include mediaquery(1050px) {
+          width: 55%;
+        }
+
+        @include mediaquery(700px) {
+          width: 90%;
+        }
+
+        @include mediaquery(500px) {
+          width: 95%;
+        }
+
+        @include mediaquery(400px) {
+          width: 100%;
+        }
     }
 
     &__right {
         width: 40%;
+
+        @include mediaquery(700px) {
+            width: 90%;
+        }
+
+        @include mediaquery(500px) {
+            width: 95%;
+        }
+  
+          @include mediaquery(400px) {
+            width: 100%;
+        }
     }
 
     &__title {
@@ -17,6 +60,10 @@
     }
 
     &__list {
+
+        @include mediaquery(700px) {
+          margin-bottom: 3rem;
+        }
 
         &-item {
             display: flex;
@@ -30,7 +77,7 @@
             }
 
             &--img {
-                background-image: url(../img/burek_slice.jpg);
+                background-image: url(../img/burek_slice_thumbnail.jpg);
                 background-size: cover;
                 background-position: center;
                 height: 7rem;
@@ -53,6 +100,10 @@
             &--price {
                 margin: 1.5rem;
                 color: $red;
+
+                @include mediaquery(800px) {
+                  margin: .5rem;
+                }
             }
         }
 
@@ -64,13 +115,17 @@
     &__currentproduct {
         margin-bottom: 3rem;
 
+        @include mediaquery(700px) {
+          margin-bottom: 5rem;
+        }
+
         &-bigtitle {
             font-size: 2.6rem;
             margin-bottom: 1rem;
         }
 
         &-img {
-            background-image: url(../img/kaffe_tarta.jpg);
+            background-image: url(../img/kaffe_tarta_medium.jpg);
             background-position: center;
             background-size: cover;
             height: 25vh;
@@ -131,10 +186,17 @@
             text-align: right;
             width: 20%;
             color: $red;
+
+            @include mediaquery(900px) {
+              width: 25%;
+            }
         }
     }
 
     &__latest {
+        @include mediaquery(700px) {
+            margin-bottom: 5rem;
+        }
 
         &-title {
             margin-bottom: 1rem;
@@ -152,13 +214,17 @@
             &--img {
                 width: 7rem;
                 height: 7rem;
-                background-image: url(../img/burek_slice.jpg);
+                background-image: url(../img/burek_slice_thumbnail.jpg);
                 background-position: center;
                 background-size: cover;
             }
 
             &--info {
                 width: 60%;
+
+                @include mediaquery(1000px) {
+                  width: 45%;
+                }
             }
 
             &--date {
@@ -174,6 +240,10 @@
             &--title {
                 font-size: 1.8rem;
                 margin-bottom: .5rem;
+
+                @include mediaquery(950px) {
+                    font-size: 1.6rem;
+                  }
             }
 
             &--desc {
