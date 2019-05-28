@@ -1,3 +1,9 @@
+@charset "UTF-8";
+/* 
+Theme Name: Bosna Burek Theme
+Author: Yamo Gebrewold
+Description: Ett tema för ett konditori i Malmö
+ */
 *, *::before, *::after {
   box-sizing: border-box;
   padding: 0;
