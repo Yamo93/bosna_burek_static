@@ -1,4 +1,4 @@
-.menu {
+.ourmenu {
     display: flex;
     justify-content: space-between;
     padding: 6rem;
@@ -65,10 +65,11 @@
           margin-bottom: 3rem;
         }
 
-        &-item {
+        &-item a {
             display: flex;
             justify-content: space-between;
             padding: 1.5rem 0;
+            color: $black;
             cursor: pointer;
             transition: all .3s;
 
@@ -76,8 +77,23 @@
                 background-color: rgba(#EEE, .5);
             }
 
+            .wrap {
+                display: flex;
+            }
+
+            .attachment-thumbnail {
+                height: 7rem;
+                width: 7rem;
+                margin-right: 2.5rem;
+                object-fit: cover;
+            }
+
+        }
+
+        &-item {
+
             &--img {
-                background-image: url(../img/burek_slice_thumbnail.jpg);
+                background-image: url(./img/burek_slice_thumbnail.jpg);
                 background-size: cover;
                 background-position: center;
                 height: 7rem;
@@ -124,8 +140,15 @@
             margin-bottom: 1rem;
         }
 
+        .attachment-medium_large {
+            height: 25vh;
+            margin-bottom: 1.5rem;
+            width: 100%;
+            object-fit: cover;
+        }
+
         &-img {
-            background-image: url(../img/kaffe_tarta_medium.jpg);
+            background-image: url(./img/kaffe_tarta_medium.jpg);
             background-position: center;
             background-size: cover;
             height: 25vh;
@@ -160,7 +183,7 @@
             margin-bottom: 1.5rem;
         }
 
-        &-text {
+        &-text, p {
             font-size: 1.4rem;
             margin-bottom: 2rem;
         }
@@ -202,19 +225,20 @@
             margin-bottom: 1rem;
         }
 
-        &-list {
-
-        }
-
         &-item {
             display: flex;
             justify-content: space-between;
             padding: 1.5rem 0;
 
+            .attachment-thumbnail {
+                width: 7rem;
+                height: 7rem;
+            }
+
             &--img {
                 width: 7rem;
                 height: 7rem;
-                background-image: url(../img/burek_slice_thumbnail.jpg);
+                background-image: url(./img/burek_slice_thumbnail.jpg);
                 background-position: center;
                 background-size: cover;
             }

@@ -18,7 +18,7 @@
         }
     }
 
-    &__menu {
+    &__menu, #menu-fotmeny {
         display: flex;
         margin-bottom: 2rem;
 
@@ -26,7 +26,7 @@
             flex-direction: column;
         }
 
-        &-item {
+        &-item, .menu-item {
             padding: 1rem 2.5rem;
             font-size: 1.6rem;
 
@@ -44,6 +44,11 @@
                 color: $red;
             }
         }
+    }
+
+    &__menu {
+        // Gömmer initiala menyn (som ej är dynamisk)
+        display: none;
     }
 
     &__copy {

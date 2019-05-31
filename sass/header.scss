@@ -31,14 +31,16 @@
         }
     }
 
-    &__menu {
+
+
+    &__menu, #menu-huvudmeny {
         display: flex;
 
         @include mediaquery(600px) {
           display: none;
         }
 
-        &-item {
+        &-item, .menu-item {
             padding: 0 2rem;
 
             @include mediaquery(850px) {
@@ -59,6 +61,14 @@
                 color: $yellow;
             }
         }
+
+        .current-menu-item a {
+            color: $yellow;
+        }
+    }
+
+    &__menu {
+        display: none;
     }
 }
 
