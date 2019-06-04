@@ -27,7 +27,6 @@
                         <h1 class="ourmenu__list-item--price">
                         <?php 
                             echo get_post_meta(get_the_ID(), 'Pris', TRUE) . ' kr';
-                            the_date();
                         ?>
                         </h1>
                     </a>
@@ -95,7 +94,7 @@
                     <li class="ourmenu__latest-item">
                         <?php if ( has_post_thumbnail() ) {the_post_thumbnail('thumbnail');} ?>
                         <div class="ourmenu__latest-item--info">
-                            <p class="ourmenu__latest-item--date"><i class="fas fa-clock icon"></i> <?php the_date(); ?></p>
+                            <p class="ourmenu__latest-item--date"><i class="fas fa-clock icon"></i><?php echo get_the_date(); ?></p>
                             <h2 class="ourmenu__latest-item--title"><?php the_title(); ?></h2>
                             <p class="ourmenu__latest-item--desc"><?php the_excerpt(); ?></p>
                         </div>
@@ -109,42 +108,7 @@
                         </div>
                     </li>
                     <?php endwhile; wp_reset_query(); ?>
-                    <!-- <li class="ourmenu__latest-item">
-                        <div class="ourmenu__latest-item--img"></div>
-                        <div class="ourmenu__latest-item--info">
-                            <p class="ourmenu__latest-item--date"><i class="fas fa-clock icon"></i> 2019-01-01</p>
-                            <h2 class="ourmenu__latest-item--title">Nytt burekerbjudande</h2>
-                            <p class="ourmenu__latest-item--desc">Med ostfyllning.</p>
-                        </div>
-                        <div class="ourmenu__latest-item--price">
-                            <h1>29 kr</h1>
-                            <a href="#">Läs mer</a>
-                        </div>
-                    </li>
-                    <li class="ourmenu__latest-item">
-                        <div class="ourmenu__latest-item--img"></div>
-                        <div class="ourmenu__latest-item--info">
-                            <p class="ourmenu__latest-item--date"><i class="fas fa-clock icon"></i> 2019-01-01</p>
-                            <h2 class="ourmenu__latest-item--title">Nytt burekerbjudande</h2>
-                            <p class="ourmenu__latest-item--desc">Med ostfyllning.</p>
-                        </div>
-                        <div class="ourmenu__latest-item--price">
-                            <h1>29 kr</h1>
-                            <a href="#">Läs mer</a>
-                        </div>
-                    </li>
-                    <li class="ourmenu__latest-item">
-                        <div class="ourmenu__latest-item--img"></div>
-                        <div class="ourmenu__latest-item--info">
-                            <p class="ourmenu__latest-item--date"><i class="fas fa-clock icon"></i> 2019-01-01</p>
-                            <h2 class="ourmenu__latest-item--title">Nytt burekerbjudande</h2>
-                            <p class="ourmenu__latest-item--desc">Med ostfyllning.</p>
-                        </div>
-                        <div class="ourmenu__latest-item--price">
-                            <h1>29 kr</h1>
-                            <a href="#">Läs mer</a>
-                        </div>
-                    </li> -->
+
                 </ul>
 
             </section>

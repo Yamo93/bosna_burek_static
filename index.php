@@ -24,7 +24,7 @@
                 <div class="info">
                     <h2 class="frontinfo__box-title">Läs senaste nytt</h2>
                     <p class="frontinfo__box-text">Vår verksamhet söker ständigt nya lösningar för att bidra med en trevligare upplevelse för våra kunder.</p>
-                    <a href="#" class="frontinfo__box-link">Läs mer</a>
+                    <a href="<?php echo home_url(); ?>" class="frontinfo__box-link">Läs mer</a>
                 </div>
             </div>
             <div class="frontinfo__box">

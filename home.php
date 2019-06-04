@@ -10,36 +10,26 @@
             <div class="line">
                 <div class="fill"></div>
             </div>
-            <article class="news__article">
-                <a href="#"><div class="news__article-img"></div></a>
-                <div class="news__article-info">
-                    <p class="news__article-date"><i class="fas fa-clock icon"></i>2019-05-20</p>
-                    <p class="news__article-user"><i class="fas fa-user icon"></i>Av Yamo Gebrewold</p>
-                </div>
-                <a href="#"><h2 class="news__article-title">Nytt luncherbjudande exklusivt på onsdagar!</h2></a>
-                <p class="news__article-excerpt">Vi serverar olika burek-varianter, men på onsdagar har vi ett exklusivt erbjudande. Missa inte det!</p>
-                <a href="#" class="news__article-readmore">Läs mer</a>
-            </article>
-            <article class="news__article">
-                <a href="#"><div class="news__article-img"></div></a>
-                <div class="news__article-info">
-                    <p class="news__article-date"><i class="fas fa-clock icon"></i>2019-05-20</p>
-                    <p class="news__article-user"><i class="fas fa-user icon"></i>Av Yamo Gebrewold</p>
-                </div>
-                <a href="#"><h2 class="news__article-title">Nytt luncherbjudande exklusivt på onsdagar!</h2></a>
-                <p class="news__article-excerpt">Vi serverar olika burek-varianter, men på onsdagar har vi ett exklusivt erbjudande. Missa inte det!</p>
-                <a href="#" class="news__article-readmore">Läs mer</a>
-            </article>
-            <article class="news__article">
-                <a href="#"><div class="news__article-img"></div></a>
-                <div class="news__article-info">
-                    <p class="news__article-date"><i class="fas fa-clock icon"></i>2019-05-20</p>
-                    <p class="news__article-user"><i class="fas fa-user icon"></i>Av Yamo Gebrewold</p>
-                </div>
-                <a href="#"><h2 class="news__article-title">Nytt luncherbjudande exklusivt på onsdagar!</h2></a>
-                <p class="news__article-excerpt">Vi serverar olika burek-varianter, men på onsdagar har vi ett exklusivt erbjudande. Missa inte det!</p>
-                <a href="#" class="news__article-readmore">Läs mer</a>
-            </article>
+            <?php 
+                if ( have_posts() ) {
+                    while ( have_posts() ) {
+                        the_post(); ?>
+                        <article class="news__article">
+                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium-large'); ?></a>
+                            <div class="news__article-info">
+                                <p class="news__article-date"><i class="fas fa-clock icon"></i><?php echo get_the_date(); ?></p>
+                                <p class="news__article-user"><i class="fas fa-user icon"></i>Av <?php the_author(); ?></p>
+                            </div>
+                            <a href="<?php the_permalink(); ?>"><h2 class="news__article-title"><?php the_title(); ?></h2></a>
+                            <p class="news__article-excerpt"><?php the_excerpt(); ?></p>
+                            <a href="<?php the_permalink(); ?>" class="news__article-readmore">Läs mer</a>
+                        </article>
+
+
+                    <?php
+                    } // end while
+                } // end if
+            ?>
         </section>
         <section class="news__right">
             <h1 class="news__title">Urval av artiklar</h1>
@@ -47,46 +37,29 @@
                 <div class="fill"></div>
             </div>
             <ul class="news__latest">
-                <li class="news__latest-item">
-                    <a href="#"><div class="news__latest-img"></div></a>
-                    <div class="news__latest-info">
-                        <p class="news__latest-date"><i class="fas fa-clock icon"></i>2019-01-01</p>
-                        <a href="#">
-                            <h2 class="news__latest-title">Nytt burekerbjudande!</h2>
-                        </a>
-                        <p class="news__latest-user"><i class="fas fa-user icon"></i>Av <span>Yamo Gebrewold</span></p>
-                    </div>
-                </li>
-                <li class="news__latest-item">
-                    <a href="#"><div class="news__latest-img"></div></a>
-                    <div class="news__latest-info">
-                        <p class="news__latest-date"><i class="fas fa-clock icon"></i>2019-01-01</p>
-                        <a href="#">
-                            <h2 class="news__latest-title">Nytt burekerbjudande!</h2>
-                        </a>
-                        <p class="news__latest-user"><i class="fas fa-user icon"></i>Av <span>Yamo Gebrewold</span></p>
-                    </div>
-                </li>
-                <li class="news__latest-item">
-                    <a href="#"><div class="news__latest-img"></div></a>
-                    <div class="news__latest-info">
-                        <p class="news__latest-date"><i class="fas fa-clock icon"></i>2019-01-01</p>
-                        <a href="#">
-                            <h2 class="news__latest-title">Nytt burekerbjudande!</h2>
-                        </a>
-                        <p class="news__latest-user"><i class="fas fa-user icon"></i>Av <span>Yamo Gebrewold</span></p>
-                    </div>
-                </li>
-                <li class="news__latest-item">
-                    <a href="#"><div class="news__latest-img"></div></a>
-                    <div class="news__latest-info">
-                        <p class="news__latest-date"><i class="fas fa-clock icon"></i>2019-01-01</p>
-                        <a href="#">
-                            <h2 class="news__latest-title">Nytt burekerbjudande!</h2>
-                        </a>
-                        <p class="news__latest-user"><i class="fas fa-user icon"></i>Av <span>Yamo Gebrewold</span></p>
-                    </div>
-                </li>
+            <?php
+                // Query random posts
+                $the_query = new WP_Query( array(
+                    'post_type'      => 'post',
+                    'orderby'        => 'rand',
+                    'posts_per_page' => 3,
+                ) ); ?>
+
+                <?php
+                // If we have posts lets show them
+                if ( $the_query->have_posts() ) : ?>
+                    <li class="news__latest-item">
+                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+                        <div class="news__latest-info">
+                            <p class="news__latest-date"><i class="fas fa-clock icon"></i><?php echo get_the_date(); ?></p>
+                            <a href="<?php the_permalink(); ?>">
+                                <h2 class="news__latest-title"><?php the_title(); ?></h2>
+                            </a>
+                            <p class="news__latest-user"><i class="fas fa-user icon"></i>Av <span><?php the_author(); ?></span></p>
+                        </div>
+                    </li>
+                <?php endif; ?>
+ 
             </ul>
 
             <section class="news__widget">

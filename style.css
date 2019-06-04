@@ -676,6 +676,14 @@ a:hover, a:active {
     margin-bottom: 1rem; }
   .news__article {
     margin-bottom: 6rem; }
+    .news__article .attachment-medium-large {
+      height: 30vh;
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 2rem;
+      transition: all .3s; }
+      .news__article .attachment-medium-large:hover {
+        filter: brightness(90%); }
     .news__article-img {
       height: 30vh;
       background-image: url(./img/burek_slice.jpg);
@@ -698,9 +706,9 @@ a:hover, a:active {
       margin-right: 2rem; }
     .news__article-title {
       margin-bottom: 2rem; }
-    .news__article-excerpt {
+    .news__article-excerpt, .news__article p {
       font-size: 1.6rem;
-      width: 60%;
+      width: 80%;
       margin-bottom: 2rem; }
     .news__article-readmore:link, .news__article-readmore:visited {
       padding: .5rem 3rem;
@@ -715,6 +723,11 @@ a:hover, a:active {
     .news__latest-item {
       display: flex;
       margin-bottom: 3rem; }
+    .news__latest .attachment-thumbnail {
+      width: 7rem;
+      height: 7rem;
+      object-fit: cover;
+      margin-right: 2rem; }
     .news__latest-img {
       width: 7rem;
       height: 7rem;
@@ -868,6 +881,13 @@ a:hover, a:active {
     background-image: url(../img/kassan.jpg);
     background-position: center;
     background-size: cover; }
+  .single .attachment-large,
+  .page .attachment-large {
+    margin: 1rem auto;
+    width: 100%;
+    height: 25vh;
+    display: block;
+    object-fit: cover; }
   .single__info,
   .page__info {
     display: flex;

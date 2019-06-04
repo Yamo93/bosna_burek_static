@@ -63,6 +63,18 @@
     &__article {
         margin-bottom: 6rem;
 
+        .attachment-medium-large {
+            height: 30vh;
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 2rem;
+            transition: all .3s;
+
+            &:hover {
+                filter: brightness(90%);
+            }
+        }
+
         &-img {
             height: 30vh;
             background-image: url(./img/burek_slice.jpg);
@@ -99,9 +111,9 @@
             margin-bottom: 2rem;
         }
 
-        &-excerpt {
+        &-excerpt, p {
             font-size: 1.6rem;
-            width: 60%;
+            width: 80%;
             margin-bottom: 2rem;
         }
 
@@ -126,6 +138,13 @@
         &-item {
             display: flex;
             margin-bottom: 3rem;
+        }
+
+        .attachment-thumbnail {
+            width: 7rem;
+            height: 7rem;
+            object-fit: cover;
+            margin-right: 2rem;
         }
 
         &-img {

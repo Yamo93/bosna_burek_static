@@ -8,7 +8,6 @@
             <li class="footer__menu-item"><a href="#">Kontakta oss</a></li>
         </ul>
         <p class="footer__copy">Copyright &copy; 2019 av <strong>Yamo Gebrewold</strong></p>
-        <?php print_r(bloginfo()); ?>
         <?php wp_footer(); ?>
     </footer>
     <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>

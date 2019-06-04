@@ -12,27 +12,27 @@
             <div class="whatson__box whatson__box1">
                 <div class="whatson__box-img"></div>
                 <p class="whatson__box-text">Vi har massor av utsökta kakor till salu. Passa på att ta del utav våra sommarerbjudanden.</p>
-                <a href="#" class="whatson__box-link">Se menyn &rarr;</a>
+                <a href="<?php bloginfo('url'); ?>/meny" class="whatson__box-link">Se menyn &rarr;</a>
             </div>
             <div class="whatson__box whatson__box2">
                 <div class="whatson__box-img"></div>
                 <p class="whatson__box-text">Vi har massor av utsökta kakor till salu. Passa på att ta del utav våra sommarerbjudanden.</p>
-                <a href="#" class="whatson__box-link">Se menyn &rarr;</a>
+                <a href="<?php bloginfo('url'); ?>/meny" class="whatson__box-link">Se menyn &rarr;</a>
             </div>
             <div class="whatson__box whatson__box3">
                 <div class="whatson__box-img"></div>
                 <p class="whatson__box-text">Vi har massor av utsökta kakor till salu. Passa på att ta del utav våra sommarerbjudanden.</p>
-                <a href="#" class="whatson__box-link">Se menyn &rarr;</a>
+                <a href="<?php bloginfo('url'); ?>/meny" class="whatson__box-link">Se menyn &rarr;</a>
             </div>
             <div class="whatson__box whatson__box4">
                 <div class="whatson__box-img"></div>
                 <p class="whatson__box-text">Vi har massor av utsökta kakor till salu. Passa på att ta del utav våra sommarerbjudanden.</p>
-                <a href="#" class="whatson__box-link">Se menyn &rarr;</a>
+                <a href="<?php bloginfo('url'); ?>/meny" class="whatson__box-link">Se menyn &rarr;</a>
             </div>
             <div class="whatson__box whatson__box5">
                 <div class="whatson__box-img"></div>
                 <p class="whatson__box-text">Vi har massor av utsökta kakor till salu. Passa på att ta del utav våra sommarerbjudanden.</p>
-                <a href="#" class="whatson__box-link">Se menyn &rarr;</a>
+                <a href="<?php bloginfo('url'); ?>/meny" class="whatson__box-link">Se menyn &rarr;</a>
             </div>
             <a href="menu.html" class="whatson__more">Se hela menyn</a>
         </div>
@@ -46,7 +46,7 @@
                 <div class="info">
                     <h2 class="frontinfo__box-title">Läs senaste nytt</h2>
                     <p class="frontinfo__box-text">Vår verksamhet söker ständigt nya lösningar för att bidra med en trevligare upplevelse för våra kunder.</p>
-                    <a href="#" class="frontinfo__box-link">Läs mer</a>
+                    <a href="<?php bloginfo('url'); ?>/nyheter" class="frontinfo__box-link">Läs mer</a>
                 </div>
             </div>
             <div class="frontinfo__box">
@@ -54,7 +54,7 @@
                 <div class="info">
                     <h2 class="frontinfo__box-title">Läs senaste nytt</h2>
                     <p class="frontinfo__box-text">Vår verksamhet söker ständigt nya lösningar för att bidra med en trevligare upplevelse för våra kunder.</p>
-                    <a href="#" class="frontinfo__box-link">Läs mer</a>
+                    <a href="<?php bloginfo('url'); ?>/nyheter" class="frontinfo__box-link">Läs mer</a>
                 </div>
             </div>
             <div class="frontinfo__box">
@@ -62,7 +62,7 @@
                 <div class="info">
                     <h2 class="frontinfo__box-title">Läs senaste nytt</h2>
                     <p class="frontinfo__box-text">Vår verksamhet söker ständigt nya lösningar för att bidra med en trevligare upplevelse för våra kunder.</p>
-                    <a href="#" class="frontinfo__box-link">Läs mer</a>
+                    <a href="<?php bloginfo('url'); ?>/nyheter" class="frontinfo__box-link">Läs mer</a>
                 </div>
             </div>
         </div>
