@@ -4,12 +4,14 @@
 
 ?>
 
+
     <div class="news">
         <section class="news__left">
             <h1 class="news__title">Nyheter</h1>
             <div class="line">
                 <div class="fill"></div>
             </div>
+            <!-- Skriver ut ett nyhetsflöde av de senaste artiklarna -->
             <?php 
                 if ( have_posts() ) {
                     while ( have_posts() ) {
@@ -21,14 +23,18 @@
                                 <p class="news__article-user"><i class="fas fa-user icon"></i>Av <?php the_author(); ?></p>
                             </div>
                             <a href="<?php the_permalink(); ?>"><h2 class="news__article-title"><?php the_title(); ?></h2></a>
-                            <p class="news__article-excerpt"><?php the_excerpt(); ?></p>
+                            <p class="news__article-excerpt"><?php echo get_the_excerpt(); ?></p>
                             <a href="<?php the_permalink(); ?>" class="news__article-readmore">Läs mer</a>
                         </article>
 
 
                     <?php
-                    } // end while
-                } // end if
+                    } // end while ?>
+                    	
+                    <?php pagination_nav(); ?>
+                    
+                    <?php 
+                    } // end if
             ?>
         </section>
         <section class="news__right">
@@ -67,6 +73,8 @@
                 <div class="line">
                     <div class="fill"></div>
                 </div>
+
+                <?php dynamic_sidebar( 'home_right_1' ); ?>
             </section>
 
         </section>

@@ -37,12 +37,14 @@ function prowp_register_my_post_types() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'custom-fields', 'revisions')
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'custom-fields', 'revisions'),
+		'taxonomies' 				 => array( 'category' )
     );
     
     register_post_type( 'products', $args );
 }
 
+// Registrerar huvud- och fotmenyerna
 function register_my_menus() {
 	register_nav_menus(
 	  array(
@@ -52,5 +54,39 @@ function register_my_menus() {
 	);
   }
   add_action( 'init', 'register_my_menus' );
+
+?>
+
+<!-- Registrerar en sidebar som agerar som widget-område -->
+<?php
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function arphabet_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Home right sidebar',
+		'id'            => 'home_right_1',
+		'before_widget' => '<div class="widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget__title">',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
+
+// Pagination
+function pagination_nav() {
+	global $wp_query;
+
+	if ( $wp_query->max_num_pages > 1 ) { ?>
+			<nav class="pagination" role="navigation">
+					<div class="nav-previous"><?php next_posts_link( '&larr; Äldre artiklar' ); ?></div>
+					<div class="nav-next"><?php previous_posts_link( 'Nyare artiklar &rarr;' ); ?></div>
+			</nav>
+<?php }
+}
 
 ?>

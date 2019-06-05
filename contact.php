@@ -34,16 +34,27 @@
             <div class="line">
                 <div class="fill"></div>
             </div>
-            <form method="post">
+            <?php 
+            if ( have_posts() ) {
+                while ( have_posts() ) {
+                    the_post(); 
+                    the_content();
+                    ?>
+
+                <?php
+                } // end while
+            } // end if
+            ?>
+            <!-- <form method="post">
                 <input type="text" name="name" id="name" placeholder="Namn">
                 <input type="email" name="email" id="email" placeholder="E-postadress">
                 <input type="text" name="address" id="address" placeholder="Adress">
                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Meddelande"></textarea>
                 <input type="submit" value="Skicka meddelande" name="submit">
-            </form>
+            </form> -->
         </section>
         <div class="contact__right">
-
+            <?php echo do_shortcode( '[wpgmza id="1"]' ); ?>
         </div>
 
     </div>

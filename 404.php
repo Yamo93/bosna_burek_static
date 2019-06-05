@@ -4,17 +4,9 @@
 ?>
 
     
-    <section class="page">
-    <?php if ( have_posts() ) : ?>
-        <?php while ( have_posts() ) : the_post(); ?>
-        <?php if(has_post_thumbnail()) the_post_thumbnail('large'); ?>
-        <h1 class="page__title"><?php the_title(); ?></h1>
-        <div class="line">
-            <div class="fill"></div>
-        </div>
-        <p class="page__text"><?php the_content(); ?></p>
-        <?php endwhile; ?>
-        <?php endif; ?>
+    <section class="error">
+        <h1 class="error__title">Oj då! Något gick fel. 🤔</h1>
+        <p class="error__text">Vi kunde tyvärr inte hitta sidan du söker...</p>
     </section>
 
     <section class="related">
@@ -22,6 +14,7 @@
         <div class="line">
             <div class="fill"></div>
         </div>
+
         <?php
             // Query random posts
             $the_query = new WP_Query( array(
@@ -51,6 +44,10 @@
                 </div>
 
             <?php endif; ?>
+    
+
+        </div>
+
     </section>
 
-    <?php get_footer(); ?>
+<?php get_footer(); ?>

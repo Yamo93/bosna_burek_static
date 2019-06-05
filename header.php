@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bosna Burek Konditori</title>
+    <!-- Länk till Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_stylesheet_directory_uri(); ?>/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon-16x16.png">
@@ -21,8 +22,10 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <h1 class="navbar__logo">Bosna Burek Konditori <span><i class="fas fa-mug-hot"></i></span></h1>
+            <!-- Sidans logga -->
+            <a href="<?php bloginfo('siteurl'); ?>"><h1 class="navbar__logo">Bosna Burek Konditori <span><i class="fas fa-mug-hot"></i></span></h1></a>
 
+            <!-- Huvudmenyn -->
             <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
             <ul class="navbar__menu">
                 <li class="navbar__menu-item"><a href="#" class="active">Hem</a></li>

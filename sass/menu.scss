@@ -14,19 +14,15 @@
         padding-top: calc(15vh + 4rem);
     }
 
-    @include mediaquery(700px) {
+    @include mediaquery(850px) {
       flex-direction: column;
       align-items: center;
     }
 
     &__left {
-        width: 45%;
+        width: 55%;
 
-        @include mediaquery(1050px) {
-          width: 55%;
-        }
-
-        @include mediaquery(700px) {
+        @include mediaquery(850px) {
           width: 90%;
         }
 
@@ -42,7 +38,7 @@
     &__right {
         width: 40%;
 
-        @include mediaquery(700px) {
+        @include mediaquery(850px) {
             width: 90%;
         }
 
@@ -61,7 +57,7 @@
 
     &__list {
 
-        @include mediaquery(700px) {
+        @include mediaquery(850px) {
           margin-bottom: 3rem;
         }
 
@@ -101,7 +97,7 @@
             }
 
             &--info {
-                width: 60%;
+                width: 50%;
 
                 h2 {
                     font-size: 1.8rem;
@@ -116,6 +112,8 @@
             &--price {
                 margin: 1.5rem;
                 color: $red;
+                width: 20%;
+                text-align: right;
 
                 @include mediaquery(800px) {
                   margin: .5rem;
@@ -131,7 +129,7 @@
     &__currentproduct {
         margin-bottom: 3rem;
 
-        @include mediaquery(700px) {
+        @include mediaquery(850px) {
           margin-bottom: 5rem;
         }
 
@@ -157,7 +155,6 @@
 
         &-desc {
             display: flex;
-            margin-bottom: 2.5rem;
 
             .icon {
                 color: $red;
@@ -217,7 +214,7 @@
     }
 
     &__latest {
-        @include mediaquery(700px) {
+        @include mediaquery(850px) {
             margin-bottom: 5rem;
         }
 
@@ -233,6 +230,7 @@
             .attachment-thumbnail {
                 width: 7rem;
                 height: 7rem;
+                margin-right: 1.5rem;
             }
 
             &--img {
@@ -244,10 +242,11 @@
             }
 
             &--info {
-                width: 60%;
+                width: 65%;
+                display: flex;
 
                 @include mediaquery(1000px) {
-                  width: 45%;
+                  width: 60%;
                 }
             }
 

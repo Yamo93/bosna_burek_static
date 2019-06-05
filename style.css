@@ -340,6 +340,8 @@ a:hover, a:active {
     margin-bottom: 3rem; }
     .footer__text span {
       color: #d61d4e; }
+    .footer__text a {
+      border-bottom: 1px dotted #d61d4e; }
   .footer__menu, .footer #menu-fotmeny {
     display: flex;
     margin-bottom: 2rem; }
@@ -417,7 +419,8 @@ a:hover, a:active {
     color: #226b80;
     margin-bottom: 2.5rem; }
   .newsletter form {
-    width: 80%; }
+    width: 80%;
+    margin: 0 auto; }
   .newsletter__email {
     width: 100%;
     padding: 1rem 1.5rem;
@@ -451,16 +454,13 @@ a:hover, a:active {
     .ourmenu {
       padding: 2rem;
       padding-top: calc(15vh + 4rem); } }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 850px) {
     .ourmenu {
       flex-direction: column;
       align-items: center; } }
   .ourmenu__left {
-    width: 45%; }
-    @media screen and (max-width: 1050px) {
-      .ourmenu__left {
-        width: 55%; } }
-    @media screen and (max-width: 700px) {
+    width: 55%; }
+    @media screen and (max-width: 850px) {
       .ourmenu__left {
         width: 90%; } }
     @media screen and (max-width: 500px) {
@@ -471,7 +471,7 @@ a:hover, a:active {
         width: 100%; } }
   .ourmenu__right {
     width: 40%; }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 850px) {
       .ourmenu__right {
         width: 90%; } }
     @media screen and (max-width: 500px) {
@@ -482,7 +482,7 @@ a:hover, a:active {
         width: 100%; } }
   .ourmenu__title {
     margin-bottom: 1rem; }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 850px) {
     .ourmenu__list {
       margin-bottom: 3rem; } }
   .ourmenu__list-item a {
@@ -508,7 +508,7 @@ a:hover, a:active {
     height: 7rem;
     width: 7rem; }
   .ourmenu__list-item--info {
-    width: 60%; }
+    width: 50%; }
     .ourmenu__list-item--info h2 {
       font-size: 1.8rem;
       margin-bottom: 1.5rem; }
@@ -516,7 +516,9 @@ a:hover, a:active {
       font-size: 1.4rem; }
   .ourmenu__list-item--price {
     margin: 1.5rem;
-    color: #d61d4e; }
+    color: #d61d4e;
+    width: 20%;
+    text-align: right; }
     @media screen and (max-width: 800px) {
       .ourmenu__list-item--price {
         margin: .5rem; } }
@@ -524,7 +526,7 @@ a:hover, a:active {
     border-bottom: 0.5px solid rgba(51, 51, 51, 0.2); }
   .ourmenu__currentproduct {
     margin-bottom: 3rem; }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 850px) {
       .ourmenu__currentproduct {
         margin-bottom: 5rem; } }
     .ourmenu__currentproduct-bigtitle {
@@ -542,8 +544,7 @@ a:hover, a:active {
       height: 25vh;
       margin-bottom: 1.5rem; }
     .ourmenu__currentproduct-desc {
-      display: flex;
-      margin-bottom: 2.5rem; }
+      display: flex; }
       .ourmenu__currentproduct-desc .icon {
         color: #d61d4e;
         margin-right: .5rem; }
@@ -576,7 +577,7 @@ a:hover, a:active {
       @media screen and (max-width: 900px) {
         .ourmenu__currentproduct-price {
           width: 25%; } }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 850px) {
     .ourmenu__latest {
       margin-bottom: 5rem; } }
   .ourmenu__latest-title {
@@ -587,7 +588,8 @@ a:hover, a:active {
     padding: 1.5rem 0; }
     .ourmenu__latest-item .attachment-thumbnail {
       width: 7rem;
-      height: 7rem; }
+      height: 7rem;
+      margin-right: 1.5rem; }
     .ourmenu__latest-item--img {
       width: 7rem;
       height: 7rem;
@@ -595,10 +597,11 @@ a:hover, a:active {
       background-position: center;
       background-size: cover; }
     .ourmenu__latest-item--info {
-      width: 60%; }
+      width: 65%;
+      display: flex; }
       @media screen and (max-width: 1000px) {
         .ourmenu__latest-item--info {
-          width: 45%; } }
+          width: 60%; } }
     .ourmenu__latest-item--date {
       font-size: 1.6rem;
       margin-bottom: 1rem; }
@@ -639,7 +642,7 @@ a:hover, a:active {
     .news {
       padding: 3rem;
       padding-top: calc(15vh + 4rem); } }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 850px) {
     .news {
       flex-direction: column;
       align-items: center; } }
@@ -658,6 +661,9 @@ a:hover, a:active {
     @media screen and (max-width: 400px) {
       .news__left {
         width: 100%; } }
+    .news__left .pagination .nav-previous a:link, .news__left .pagination .nav-previous a:visited, .news__left .pagination .nav-next a:link, .news__left .pagination .nav-next a:visited {
+      font-size: 1.6rem;
+      border-bottom: 1px dotted #d61d4e; }
   .news__right {
     width: 30%; }
     @media screen and (max-width: 950px) {
@@ -699,16 +705,16 @@ a:hover, a:active {
       .news__article-info .icon {
         color: #d61d4e;
         margin-right: 1rem; }
+    .news__article-excerpt {
+      font-size: 1.6rem;
+      width: 80%;
+      margin-bottom: 2rem; }
     .news__article-date, .news__article-user {
       font-size: 1.6rem;
       color: rgba(51, 51, 51, 0.8); }
     .news__article-date {
       margin-right: 2rem; }
     .news__article-title {
-      margin-bottom: 2rem; }
-    .news__article-excerpt, .news__article p {
-      font-size: 1.6rem;
-      width: 80%;
       margin-bottom: 2rem; }
     .news__article-readmore:link, .news__article-readmore:visited {
       padding: .5rem 3rem;
@@ -747,6 +753,13 @@ a:hover, a:active {
       margin-bottom: .5rem; }
     .news__latest-user span {
       font-weight: bold; }
+  @media screen and (max-width: 850px) {
+    .news__widget {
+      display: flex;
+      flex-direction: column; } }
+  .news__widget .widget {
+    display: flex;
+    justify-content: center; }
 
 .contact {
   padding-top: calc(15vh);
@@ -778,11 +791,13 @@ a:hover, a:active {
     .contact__left form {
       display: flex;
       flex-wrap: wrap;
+      flex-direction: column;
       justify-content: space-between; }
       @media screen and (max-width: 500px) {
         .contact__left form {
           margin-bottom: 5rem; } }
       .contact__left form input[type=text], .contact__left form input[type=email], .contact__left form textarea {
+        width: 100%;
         padding: 1rem;
         font-family: "Lato", sans-serif;
         font-size: 1.8rem;
@@ -844,7 +859,8 @@ a:hover, a:active {
         width: 100%; } }
 
 .single,
-.page {
+.page,
+.error {
   margin: 0 auto;
   margin-bottom: 8rem;
   width: 50%;
@@ -852,69 +868,84 @@ a:hover, a:active {
   padding-top: calc(15vh + 4rem); }
   @media screen and (max-width: 1000px) {
     .single,
-    .page {
+    .page,
+    .error {
       width: 65%; } }
   @media screen and (max-width: 800px) {
     .single,
-    .page {
+    .page,
+    .error {
       width: 75%; } }
   @media screen and (max-width: 600px) {
     .single,
-    .page {
+    .page,
+    .error {
       width: 85%;
       padding: 3rem;
       padding-top: calc(15vh + 4rem); } }
   @media screen and (max-width: 500px) {
     .single,
-    .page {
+    .page,
+    .error {
       width: 95%; } }
   @media screen and (max-width: 400px) {
     .single,
-    .page {
+    .page,
+    .error {
       width: 100%;
       padding: 1.5rem;
       padding-top: calc(15vh + 4rem); } }
   .single__img,
-  .page__img {
+  .page__img,
+  .error__img {
     margin-bottom: 1rem;
     height: 25vh;
     background-image: url(../img/kassan.jpg);
     background-position: center;
     background-size: cover; }
   .single .attachment-large,
-  .page .attachment-large {
+  .page .attachment-large,
+  .error .attachment-large {
     margin: 1rem auto;
     width: 100%;
     height: 25vh;
     display: block;
     object-fit: cover; }
   .single__info,
-  .page__info {
+  .page__info,
+  .error__info {
     display: flex;
     margin-bottom: 2rem; }
   .single__date, .single__user,
   .page__date,
-  .page__user {
+  .page__user,
+  .error__date,
+  .error__user {
     font-size: 1.6rem;
     margin-bottom: .5rem; }
     .single__date .icon, .single__user .icon,
     .page__date .icon,
-    .page__user .icon {
+    .page__user .icon,
+    .error__date .icon,
+    .error__user .icon {
       color: #d61d4e;
       margin-right: 1rem; }
   .single__date,
-  .page__date {
+  .page__date,
+  .error__date {
     margin-right: 3rem; }
   .single__title,
-  .page__title {
+  .page__title,
+  .error__title {
     margin-bottom: 1rem; }
   .single__text,
-  .page__text {
+  .page__text,
+  .error__text {
     margin-bottom: 1.5rem; }
 
 .related {
   margin: 0 auto;
-  width: 50%;
+  width: 60%;
   margin-bottom: 4rem;
   padding: 0 6rem; }
   @media screen and (max-width: 1000px) {
@@ -929,10 +960,60 @@ a:hover, a:active {
       padding: 0 3rem; } }
   @media screen and (max-width: 500px) {
     .related {
-      width: 95%; } }
+      width: 95%;
+      padding: 0 1.5rem; } }
   @media screen and (max-width: 400px) {
     .related {
       width: 100%;
       padding: 0 1.5rem; } }
   .related__title {
     margin-bottom: 1rem; }
+  .related ul {
+    display: none; }
+  .related__articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 3rem; }
+    @media screen and (max-width: 500px) {
+      .related__articles {
+        flex-direction: column;
+        align-items: center; } }
+  .related__article {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    @media screen and (max-width: 500px) {
+      .related__article {
+        width: 100%;
+        margin-bottom: 3rem;
+        align-items: stretch; } }
+    .related__article-img, .related__article .attachment-medium {
+      object-fit: cover;
+      width: 100%;
+      height: 20vh;
+      margin-bottom: 1rem;
+      transition: all .3s; }
+      .related__article-img:hover, .related__article .attachment-medium:hover {
+        filter: brightness(90%); }
+    .related__article-title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center; }
+    .related__article-permalink:link, .related__article-permalink:visited {
+      background-color: #d61d4e;
+      color: #FEFEFE;
+      font-size: 1.6rem;
+      padding: .5rem 2rem;
+      transition: all .3s; }
+      @media screen and (max-width: 500px) {
+        .related__article-permalink:link, .related__article-permalink:visited {
+          text-align: center; } }
+    .related__article-permalink:hover {
+      background-color: #e5416c; }
+
+.error__title, .error__text {
+  text-align: center; }

@@ -1,12 +1,10 @@
 <footer class="footer">
-        <p class="footer__text">Följ oss på <a href="#">Facebook.</a></p>
+        <!-- Länk till sociala medier -->
+        <p class="footer__text">Följ oss på <a href="https://www.facebook.com/Bosnaburek/" target="_blank">Facebook.</a></p>
+        <!-- Fotmeny -->
         <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
-        <ul class="footer__menu">
-            <li class="footer__menu-item"><a href="#">Om oss</a></li>
-            <li class="footer__menu-item"><a href="#">Senaste nytt</a></li>
-            <li class="footer__menu-item"><a href="#">Vår meny</a></li>
-            <li class="footer__menu-item"><a href="#">Kontakta oss</a></li>
-        </ul>
+        
+        <!-- Copyright -->
         <p class="footer__copy">Copyright &copy; 2019 av <strong>Yamo Gebrewold</strong></p>
         <?php wp_footer(); ?>
     </footer>

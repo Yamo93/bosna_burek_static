@@ -1,11 +1,13 @@
 <?php get_header(); ?>
+    <!-- Framsidan av webbplatsen -->
     <div class="hero">
-        <div class="hero__left">
+        <section class="hero__left">
             <h1 class="hero__left-desc">Ditt ideala ställe för en <strong>kaffepaus</strong>. Sväng förbi och pröva på vårt stora urval av kakor och delikatesser.</h1>
-        </div>
+        </section>
         <div class="hero__right"></div>
     </div>
     
+    <!-- Presentation av olika produkter från menyn -->
     <section class="whatson">
         <h1 class="whatson__title">Vad finns på menyn?</h1>
         <div class="whatson__container">
@@ -38,6 +40,7 @@
         </div>
     </section>
 
+    <!-- Nyhetssektion -->
     <section class="frontinfo">
         <h1 class="frontinfo__title">Ett konditori för alla</h1>
         <div class="frontinfo__wrapper">

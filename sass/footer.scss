@@ -16,6 +16,10 @@
         span {
             color: $red;
         }
+
+        a {
+            border-bottom: 1px dotted $red;
+        }
     }
 
     &__menu, #menu-fotmeny {
