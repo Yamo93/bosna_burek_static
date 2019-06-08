@@ -16,7 +16,7 @@
                 <div class="iconwrapper">
                     <i class="fas fa-home icon"></i>
                 </div>
-                    <p class="contact__info">Bennets väg 9, Malmö</p>
+                    <p class="contact__info">Bennets väg 32C, Malmö</p>
             </div>
             <div class="contact__means">
                 <div class="iconwrapper">
@@ -52,7 +52,7 @@
 
         <!-- Google Maps API -->
         <div class="contact__right">
-            <?php echo do_shortcode( '[wpgmza id="1"]' ); ?>
+            <?php echo do_shortcode( '[gmap-embed id="60"]' ); ?>
         </div>
 
     </div>

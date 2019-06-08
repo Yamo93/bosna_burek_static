@@ -82,4 +82,9 @@
     padding: 1rem 3rem;
     height: 7vh;
     box-shadow: 1px 1.5px 2px rgba(0, 0, 0, .5);
+
+    @include mediaquery(660px) {
+        height: 15vh;
+        padding: 4rem 3rem;
+    }
 }

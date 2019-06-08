@@ -27,12 +27,12 @@
 
             <!-- Huvudmenyn -->
             <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-            <ul class="navbar__menu">
+            <!-- <ul class="navbar__menu">
                 <li class="navbar__menu-item"><a href="#" class="active">Hem</a></li>
                 <li class="navbar__menu-item"><a href="about.html">Om oss</a></li>
                 <li class="navbar__menu-item"><a href="menu.html">Vår meny</a></li>
                 <li class="navbar__menu-item"><a href="news.html">Nyheter</a></li>
                 <li class="navbar__menu-item"><a href="contact.html">Kontakt</a></li>
-            </ul>
+            </ul> -->
         </nav>
     </header>

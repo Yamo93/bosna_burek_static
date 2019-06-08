@@ -60,6 +60,16 @@
                 }
             }
 
+            .wpcf7-not-valid-tip {
+                font-size: 1.6rem;
+                color: $red;
+                margin-bottom: 1rem;
+            }
+
+            div.wpcf7-validation-errors {
+                font-size: 1.6rem;
+            }
+
             input[type=submit] {
                 padding: 1.5rem 2.5rem;
                 background-color: $red;

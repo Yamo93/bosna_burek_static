@@ -54,7 +54,7 @@
 
                 <?php
                 // If we have posts lets show them
-                if ( $the_query->have_posts() ) : ?>
+                if ( $the_query->have_posts() ) { while ( $the_query->have_posts() ) { $the_query->the_post(); ?>
                     <li class="news__latest-item">
                         <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
                         <div class="news__latest-info">
@@ -65,7 +65,8 @@
                             <p class="news__latest-user"><i class="fas fa-user icon"></i>Av <span><?php the_author(); ?></span></p>
                         </div>
                     </li>
-                <?php endif; ?>
+                    <?php wp_reset_postdata(); ?>
+                <?php } } ?>
  
             </ul>
 
