@@ -1,3 +1,4 @@
+/*! Menyn med produkterna */
 .ourmenu {
     display: flex;
     justify-content: space-between;
@@ -56,6 +57,7 @@
     }
 
     &__list {
+        /*! Vänstra listan av produkterna */
 
         @include mediaquery(850px) {
           margin-bottom: 3rem;
@@ -97,7 +99,7 @@
             }
 
             &--info {
-                width: 50%;
+                width: 80%;
 
                 h2 {
                     font-size: 1.8rem;
@@ -126,6 +128,7 @@
         }
     }
 
+    /*! Sektionen för rekommenderad produkt */
     &__currentproduct {
         margin-bottom: 3rem;
 
@@ -162,7 +165,8 @@
             }
         }
 
-        &-date, &-user {
+        &-date, 
+        &-user {
             font-size: 1.6rem;
             color: rgba(#111, .7);
         }
@@ -180,14 +184,16 @@
             margin-bottom: 1.5rem;
         }
 
-        &-text, p {
+        &-text, 
+        p {
             font-size: 1.4rem;
             margin-bottom: 2rem;
         }
 
         &-link {
 
-            &:link, &:visited {
+            &:link, 
+            &:visited {
                 padding: 1rem 2rem;
                 background-color: $red;
                 color: $white;
@@ -274,7 +280,7 @@
             }
 
             &--price {
-                h1 {
+                h2 {
                     color: $red;
                     text-align: right;
                     margin-bottom: 1.5rem;

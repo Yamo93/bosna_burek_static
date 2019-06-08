@@ -1,3 +1,4 @@
+/*! Sidfot */
 .footer {
     min-height: 20vh;
     background-color: $darkblue;
@@ -22,7 +23,9 @@
         }
     }
 
-    &__menu, #menu-fotmeny {
+    /*! Fotmenyn */
+    &__menu, 
+    #menu-fotmeny {
         display: flex;
         margin-bottom: 2rem;
 
@@ -30,7 +33,8 @@
             flex-direction: column;
         }
 
-        &-item, .menu-item {
+        &-item, 
+        .menu-item {
             padding: 1rem 2.5rem;
             font-size: 1.6rem;
 
@@ -39,12 +43,14 @@
                 margin-bottom: .5rem;
               }
 
-            a:link, a:visited {
+            a:link, 
+            a:visited {
                 color: $yellow;
                 transition: all .3s;
             }
 
-            a:hover, a:active {
+            a:hover, 
+            a:active {
                 color: $red;
             }
         }

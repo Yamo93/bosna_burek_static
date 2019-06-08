@@ -1,9 +1,11 @@
+/*! Huvudmenysektionen */
 .header {
     width: 100%;
     position: fixed;
     z-index: 20;
 }
 
+/*! Huvudmenyn */
 .navbar {
     width: 100%;
     height: 15vh;
@@ -14,6 +16,7 @@
     transition: all .3s;
 
     &__logo {
+        /*! Sidloggan */
         margin-right: 3rem;
         color: $yellow;
         align-items: baseline;
@@ -33,7 +36,9 @@
 
 
 
-    &__menu, #menu-huvudmeny {
+    &__menu, 
+    #menu-huvudmeny {
+        /*! Menyn */
         display: flex;
 
         @include mediaquery(600px) {
@@ -72,6 +77,7 @@
     }
 }
 
+/*! En klass som läggs till med JS när användaren scrollar ner för sidan */
 .shrinknavbar {
     padding: 1rem 3rem;
     height: 7vh;

@@ -55,10 +55,6 @@ function register_my_menus() {
   }
   add_action( 'init', 'register_my_menus' );
 
-?>
-
-<!-- Registrerar en sidebar som agerar som widget-område -->
-<?php
 /**
  * Register our sidebars and widgetized areas.
  *

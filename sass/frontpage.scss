@@ -1,3 +1,4 @@
+/*! Framsidan av webbplatsen */
 .hero {
     height: 70vh;
     padding-top: 15vh;
@@ -39,6 +40,7 @@
     }
 }
 
+/*! Sektionen för olika produkter */
 .whatson {
     width: 80%;
     margin: 6rem auto;
@@ -163,7 +165,8 @@
     }
 
     &__more {
-        &:link, &:visited {
+        &:link, 
+        &:visited {
             display: none;
 
             @include mediaquery(450px) {
@@ -179,6 +182,7 @@
     }
 }
 
+/*! Informationssektionen med tre delar */
 .frontinfo {
     width: 80%;
     margin: 6rem auto;
@@ -246,7 +250,8 @@
             margin-bottom: 2rem;
         }
 
-        &-link:link, &-link:visited {
+        &-link:link, 
+        &-link:visited {
             display: inline-block;
             background-color: $red;
             color: $white;
@@ -256,7 +261,8 @@
             transition: all .3s;
         }
 
-        &-link:hover, &-link:active {
+        &-link:hover, 
+        &-link:active {
             background-color: darken($red, 10%);
         }
 

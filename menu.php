@@ -25,9 +25,9 @@
                             <p><?php echo get_the_excerpt(); ?></p>
                         </div>
                     </div>
-                        <h1 class="ourmenu__list-item--price"><?php 
+                        <h2 class="ourmenu__list-item--price"><?php 
                             echo get_post_meta(get_the_ID(), 'Pris', TRUE) . ' kr';
-                        ?></h1>
+                        ?></h2>
                     </a>
                 </li>
                 <?php endwhile; wp_reset_query(); ?>
@@ -67,11 +67,11 @@
                         <p class="ourmenu__currentproduct-text"><?php echo get_the_excerpt(); ?></p>
                         <a href="<?php the_permalink(); ?>" class="ourmenu__currentproduct-link">Läs mer</a>
                     </div>
-                    <h1 class="ourmenu__currentproduct-price">
+                    <h2 class="ourmenu__currentproduct-price">
                         <?php 
                             echo get_post_meta(get_the_ID(), 'Pris', TRUE) . ' kr';
                         ?>
-                    </h1>
+                    </h2>
                 </div>
                     <?php 
                     }
@@ -103,11 +103,11 @@
                             </div>
                         </div>
                         <div class="ourmenu__latest-item--price">
-                            <h1>
+                            <h2>
                             <?php 
                                 echo get_post_meta(get_the_ID(), 'Pris', TRUE) . ' kr';
                             ?>
-                            </h1>
+                            </h2>
                             <a href="<?php the_permalink(); ?>">Läs mer</a>
                         </div>
                     </li>

@@ -1,3 +1,4 @@
+/*! Nyhetssektionen */
 .news {
     display: flex;
     justify-content: space-between;
@@ -34,9 +35,12 @@
           width: 100%;
         }
         
+        /*! Länkarna för paginering */
         .pagination {
-            .nav-previous a, .nav-next a {
-                &:link, &:visited {
+            .nav-previous a, 
+            .nav-next a {
+                &:link, 
+                &:visited {
                     font-size: 1.6rem;
                     border-bottom: 1px dotted $red;
                 }
@@ -112,7 +116,8 @@
             margin-bottom: 2rem;
         }
 
-        &-date, &-user {
+        &-date, 
+        &-user {
             font-size: 1.6rem;
             color: rgba(#333, .8);
         }
@@ -126,7 +131,8 @@
         }
 
         &-readmore {
-            &:link, &:visited {
+            &:link, 
+            &:visited {
                 padding: .5rem 3rem;
                 background-color: $red;
                 color: $white;
@@ -134,12 +140,14 @@
                 transition: all .3s;
             }
 
-            &:hover, &:active {
+            &:hover, 
+            &:active {
                 background-color: darken($red, 10%);
             }
         }
     }
 
+    /*! Lista av de senaste artiklarna */
     &__latest {
         margin-bottom: 5rem;
 
@@ -163,10 +171,6 @@
             background-size: cover;
             box-shadow: .5px 1px 1.5px rgba(0, 0, 0, .5);
             margin-right: 2rem;
-        }
-
-        &-info {
-
         }
 
         &-date, &-user {

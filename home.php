@@ -42,6 +42,7 @@
             <div class="line">
                 <div class="fill"></div>
             </div>
+            <!-- Skriver ut tre slumpmässiga artiklar -->
             <ul class="news__latest">
             <?php
                 // Query random posts
@@ -68,6 +69,7 @@
  
             </ul>
 
+            <!-- Facebook-widget -->
             <section class="news__widget">
                 <h1 class="news__title">Senaste nytt på Facebook</h1>
                 <div class="line">
